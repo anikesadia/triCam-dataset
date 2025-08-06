@@ -1,1 +1,2 @@
-# triCam-dataset
+# About triCam-dataset
+Pedestrian detection is an important task in both the automotive and the robotics field for autonomous driving/movement. Most of the common publicly available datasets are not thought for multimodality to the same extent triCam is. The need for reliable data in many different forms for multimodal spiking neural network in an egomotion setting is clear and a dataset to address that was long overdue, which is why triCam dataset integrates RGB, DEPTH, Real events and an IMU sensor. 
