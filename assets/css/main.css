@@ -45,7 +45,7 @@ html[data-theme='dark'] .fa-sun {
 }
 #footer_name{
     color: var(--global-hover-color);
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* font-style:italic; */
     font-size: 15px;
 }
