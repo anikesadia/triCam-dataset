@@ -47,7 +47,7 @@ html[data-theme='dark'] .fa-sun {
     color: var(--global-hover-color);
     text-decoration: underline;
     /* font-style:italic; */
-    font-size: 18px;
+    font-size: 15px;
 }
 html[data-theme='dark'] .fa-moon {
     display: none
