@@ -100,7 +100,7 @@
 
                         <!-- Home -->
                         <li class="nav-item active">
-                            <a class="nav-link" href="/triCam-dataset/">Home<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/triCam-dataset/index.html">Home</a>
                         </li>
 
                         <li class="nav-item ">
@@ -110,7 +110,7 @@
                             <a class="nav-link" href="data_format/index.html">Data Format</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="download/index.html">Download</a>
+                            <a class="nav-link" href="download/index.html">Download<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="contact/index.html">Contact</a>
@@ -134,79 +134,6 @@
           <article>
             <p><br></p>
 
-<h4><a href="https://github.com/mgaoling/mpl_dataset_toolbox" target="_blank" rel="noopener noreferrer">MPL Dataset Toolbox</a></h4>
-
-<p><br></p>
-
-<p>Since the data sequences are provided in individual rosbag files given their large size, we provide an additional, easy-to-use toolbox to guide this downloading process. The most used functions are listed below:</p>
-
-<ul>
-  <li>
-<strong>Event Visualizer</strong>: transform raw event stream into accumulated event frames.</li>
-  <li>
-<strong>Data Validator</strong>: validate the downloaded rosbag or the merged rosbag for its completeness.</li>
-  <li>
-<strong>Bag Merger</strong>: merge multiple, single-topic rosbags chronologically into one complete rosbag.</li>
-  <li>
-<strong>[NEW 2022-05] <a href="https://github.com/greatoyster/k4a_projector" target="_blank" rel="noopener noreferrer">k4a Projector</a></strong>: reproject depth readings into other sensor frames.</li>
-</ul>
-
-<p><br></p>
-
-<h4>Data Format</h4>
-
-<p><br></p>
-
-<p>We provide all data sequences in two different formats (rosbag files and text files) with identical content. All rosbag files are compressed in <a href="https://wiki.ros.org/rosbag/Commandline" target="_blank" rel="noopener noreferrer">bz2 format</a>, and can be easily decompressed by using the <a href="https://github.com/mgaoling/mpl_dataset_toolbox#bag-merger" target="_blank" rel="noopener noreferrer">bag merger function in MPL dataset toolbox</a>.</p>
-
-<ul>
-  <li>
-<strong>/prophesee/left/events</strong> (<a href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg" target="_blank" rel="noopener noreferrer">prophesee_event_msgs/EventArray</a>): Events from the left event camera.</li>
-  <li>
-<strong>/prophesee/right/events</strong> (<a href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg" target="_blank" rel="noopener noreferrer">prophesee_event_msgs/EventArray</a>): Events from the right event camera.</li>
-  <li>
-<strong>/camera/left/image_mono</strong> (<a href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank" rel="noopener noreferrer">sensor_msgs/Image</a>): Grayscale images from the left regular camera.</li>
-  <li>
-<strong>/camera/right/image_mono</strong> (<a href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank" rel="noopener noreferrer">sensor_msgs/Image</a>): Grayscale images from the right regular camera.</li>
-  <li>
-<strong>/kinect/depth_image</strong> (<a href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank" rel="noopener noreferrer">sensor_msgs/Image</a>): Depth images from the RGB-D sensor.</li>
-  <li>
-<strong>/ouster/point_cloud</strong> (<a href="http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/PointCloud2.html" target="_blank" rel="noopener noreferrer">sensor_msgs/PointCloud2</a>): Point clouds from the LiDAR.</li>
-  <li>
-<strong>/imu/data</strong> (<a href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html" target="_blank" rel="noopener noreferrer">sensor_msgs/Imu</a>): Full 9-axis readings from the IMU.</li>
-  <li>
-    <p><strong>/gt/pose</strong> (<a href="http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/PoseStamped.html" target="_blank" rel="noopener noreferrer">geometry_msgs/PoseStamped</a>): Ground truth signals.</p>
-  </li>
-  <li>
-<strong>left_event.hdf5</strong> (<a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank" rel="noopener noreferrer">DSEC format</a>): Events from the left event camera stored in hdf5 format.</li>
-  <li>
-<strong>right_event.hdf5</strong> (<a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank" rel="noopener noreferrer">DSEC format</a>): Events from the right event camera stored in hdf5 format.</li>
-  <li>
-<strong>left_camera.zip</strong>: Grayscale images with their exposure time from the left regular camera.</li>
-  <li>
-<strong>right_camera.zip</strong>: Grayscale images with their exposure time from the right regular camera.</li>
-  <li>
-<strong>kinect_depth.zip</strong>: Depth images from the RGB-D sensor.</li>
-  <li>
-<strong>lidar.zip</strong>: Point clouds from the LiDAR.</li>
-  <li>
-<strong>imu.txt</strong>: Full 9-axis readings from the IMU.</li>
-  <li>
-<strong>gt.txt</strong> (<a href="https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats" target="_blank" rel="noopener noreferrer">TUM format</a>): Alternative ground truth signals for quantitative evaluation.</li>
-</ul>
-
-<p><br></p>
-
-<h4>Disclaimer on the Depth Stream</h4>
-
-<p><br></p>
-
-<ul>
-  <li>The unit of the depth intensity is in millimeters from the origin of the camera.</li>
-  <li>Dropped frames are to be expected, owing to the singularity of the depth calculation in the k4a driver. We have deliberately left a blank on the depth stream to maintain the overall correctness.</li>
-</ul>
-
-<p><br></p>
 
 <h4>Small-scale Data Sequences</h4>
 
