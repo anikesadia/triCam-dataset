@@ -44,9 +44,10 @@ html[data-theme='dark'] .fa-sun {
     display: block
 }
 #footer_name{
-    color: var(--global-text-color);
+    color: var(--global-hover-color);
     text-decoration: underline;
-    font-size: 22px;
+    font-style:italic;
+    font-size: 18px;
 }
 html[data-theme='dark'] .fa-moon {
     display: none
