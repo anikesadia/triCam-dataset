@@ -1,10 +1,10 @@
 :root {
-    --global-bg-color: #fff;
+    --global-bg-color: #e8dfdf;
     --global-code-bg-color: rgba(181, 9, 172, 0.05);
     --global-text-color: #000;
     --global-text-color-light: #828282;
-    --global-theme-color: #B509AC;
-    --global-hover-color: #B509AC;
+    --global-theme-color: #d1634d;
+    --global-hover-color: #d1634d;
     --global-footer-bg-color: #1C1C1D;
     --global-footer-text-color: #e8e8e8;
     --global-footer-link-color: #fff;
@@ -388,7 +388,8 @@ footer.sticky-bottom {
 
 .header-bar h1 {
     color: var(--global-theme-color);
-    font-size: 5rem
+    font-size: 5rem;
+    text-align: center;
 }
 
 .post-list {
