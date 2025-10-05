@@ -1,9 +1,9 @@
 :root {
-    --global-bg-color: #e8dfdf;
+    --global-bg-color: #f6f6f6;
     --global-code-bg-color: rgba(181, 9, 172, 0.05);
     --global-text-color: #000;
     --global-text-color-light: #828282;
-    --global-theme-color: #d1634d;
+    --global-theme-color: #fe4f02;
     --global-hover-color: #d1634d;
     --global-footer-bg-color: #1C1C1D;
     --global-footer-text-color: #e8e8e8;
