@@ -154,83 +154,67 @@
 
                 <ul>
                     <li>
-                        <strong>/prophesee/left/events</strong> (<a
+                        <strong>/prophesee/events</strong> (<a
                             href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg"
-                            target="_blank" rel="noopener noreferrer">prophesee_event_msgs/EventArray</a>): Events from
-                        the left event camera.
+                            target="_blank" rel="noopener noreferrer">prophesee_event_msgs/EventArray</a>): Events from the event camera.
                     </li>
                     <li>
-                        <strong>/prophesee/right/events</strong> (<a
+                        <strong>/prophesee/imu_data</strong> (<a
                             href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg"
-                            target="_blank" rel="noopener noreferrer">prophesee_event_msgs/EventArray</a>): Events from
-                        the right event camera.
+                                    target="_blank" rel="noopener noreferrer">prophesee_event_msgs/Imu</a>): Full 12-axis reading from event camera IMU.
                     </li>
                     <li>
-                        <strong>/camera/left/image_mono</strong> (<a
+                        <strong>/prophesee/bounding_box</strong> (<a
+                            href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg"
+                                    target="_blank" rel="noopener noreferrer">prophesee_event_msgs/BoundingBoxes</a>):Pedestrian Bounding box of the event data.
+                    </li>
+                    <li>
+                        <strong>/prophesee/calibration</strong> (<a
+                            href="https://github.com/prophesee-ai/prophesee_ros_wrapper/blob/master/prophesee_event_msgs/msg/EventArray.msg"
+                                    target="_blank" rel="noopener noreferrer">prophesee_event_msgs/CalibrationParams</a>):Intrinsic and extrinsic calibration parameters of the event camera.
+                    </li>
+                    <li>
+                        <strong>/realsense/rgb_image</strong> (<a
                             href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank"
-                            rel="noopener noreferrer">sensor_msgs/Image</a>): Grayscale images from the left regular
+                            rel="noopener noreferrer">sensor_msgs/RGB_Image</a>): Colored images from the RGB-D
                         camera.
                     </li>
                     <li>
-                        <strong>/camera/right/image_mono</strong> (<a
+                        <strong>/realsense/depth_image</strong> (<a
                             href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank"
-                            rel="noopener noreferrer">sensor_msgs/Image</a>): Grayscale images from the right regular
+                            rel="noopener noreferrer">sensor_msgs/Depth_Image</a>): Depth images from the RGB-D
                         camera.
                     </li>
                     <li>
-                        <strong>/kinect/depth_image</strong> (<a
+                        <strong>/realsense/imu_data</strong> (<a
                             href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html" target="_blank"
-                            rel="noopener noreferrer">sensor_msgs/Image</a>): Depth images from the RGB-D sensor.
+                            rel="noopener noreferrer">sensor_msgs/IMU</a>): RGB-D camera's IMU data.
                     </li>
                     <li>
-                        <strong>/ouster/point_cloud</strong> (<a
-                            href="http://docs.ros.org/en/lunar/api/sensor_msgs/html/msg/PointCloud2.html"
-                            target="_blank" rel="noopener noreferrer">sensor_msgs/PointCloud2</a>): Point clouds from
-                        the LiDAR.
-                    </li>
-                    <li>
-                        <strong>/imu/data</strong> (<a
+                        <strong>/realsense/bounding_box</strong> (<a
                             href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html" target="_blank"
-                            rel="noopener noreferrer">sensor_msgs/Imu</a>): Full 9-axis readings from the IMU.
+                            rel="noopener noreferrer">sensor_msgs/BoundingBoxes</a>): Full 9-axis readings from the RGB-D IMU.
                     </li>
                     <li>
-                        <p><strong>/gt/pose</strong> (<a
-                                href="http://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/PoseStamped.html"
-                                target="_blank" rel="noopener noreferrer">geometry_msgs/PoseStamped</a>): Ground truth
-                            signals.</p>
+                        <strong>/realsense/calibration</strong> (<a
+                            href="http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Imu.html" target="_blank"
+                            rel="noopener noreferrer">sensor_msgs/CalibrationParamas</a>):Intrinsic and Extrinsic parameters of the RGB-D camera.
                     </li>
                     <li>
-                        <strong>left_event.hdf5</strong> (<a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank"
-                            rel="noopener noreferrer">DSEC format</a>): Events from the left event camera stored in hdf5
-                        format.
+                        <strong>event.npy</strong> : Events from the event camera stored in Numpy format.
                     </li>
                     <li>
-                        <strong>right_event.hdf5</strong> (<a href="https://dsec.ifi.uzh.ch/data-format/"
-                            target="_blank" rel="noopener noreferrer">DSEC format</a>): Events from the right event
-                        camera stored in hdf5 format.
+                        <strong>rgbd_data.zip</strong>: colored images and depth with their exposure time from the RGB-D camera.
+                    </li>
+                   
+                    <li>
+                        <strong>Calibration.zip</strong>: Intrinsic and extrinsic camera calibration of both cameras as well as their reprojection to each other.
                     </li>
                     <li>
-                        <strong>left_camera.zip</strong>: Grayscale images with their exposure time from the left
-                        regular camera.
-                    </li>
-                    <li>
-                        <strong>right_camera.zip</strong>: Grayscale images with their exposure time from the right
-                        regular camera.
-                    </li>
-                    <li>
-                        <strong>kinect_depth.zip</strong>: Depth images from the RGB-D sensor.
-                    </li>
-                    <li>
-                        <strong>lidar.zip</strong>: Point clouds from the LiDAR.
+                        <strong>bounding_boxes.zip</strong>:Pedestrian bounding boxes in both YOLO and global format.
                     </li>
                     <li>
                         <strong>imu.txt</strong>: Full 9-axis readings from the IMU.
-                    </li>
-                    <li>
-                        <strong>gt.txt</strong> (<a
-                            href="https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats" target="_blank"
-                            rel="noopener noreferrer">TUM format</a>): Alternative ground truth signals for quantitative
-                        evaluation.
                     </li>
                 </ul>
 
