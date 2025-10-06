@@ -226,7 +226,7 @@ blockquote {
 }
 
 .navbar {
-    background-color:  var(--global-text-color);
+    background-color:#fe4f02;
     color: white;
     box-shadow: none;
     border-bottom: 1px solid var(--global-divider-color);
