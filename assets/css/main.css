@@ -10,7 +10,8 @@
     --global-footer-link-color: #fff;
     --global-distill-app-color: #828282;
     --global-divider-color: rgba(0, 0, 0, .1);
-    --global-card-bg-color: #fff
+    --global-card-bg-color: #fff;
+    --nav-text-color: white;
 }
 
 :root .fa-sun {
@@ -229,21 +230,19 @@ blockquote {
 }
 
 .navbar {
-    background-color:#fe4f02;
-    color: white;
     box-shadow: none;
     border-bottom: 1px solid var(--global-divider-color);
-    background-color: var(--global-bg-color);
+    background-color: var(--global-footer-bg-color);
     opacity: 0.95
 }
 
 .navbar .dropdown-menu {
-    background-color: var(--global-bg-color);
+    background-color: var(--global-footer-bg-color);
     border: 1px solid var(--global-divider-color)
 }
 
 .navbar .dropdown-menu a:not(.active) {
-    color: var(--global-text-color)
+    color: var(--global-footer-text-color)
 }
 
 .navbar .dropdown-menu a:hover {
@@ -260,7 +259,7 @@ blockquote {
 
 .dropdown-item:hover {
     color: var(--global-hover-color);
-    background-color: var(--global-bg-color)
+    background-color: var(--global-footer-bg-color)
 }
 
 .navbar.navbar-light a:hover {
@@ -268,11 +267,11 @@ blockquote {
 }
 
 .navbar.navbar-light .navbar-brand {
-    color: var(--global-text-color)
+    color: var(--global-footer-text-color)
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color)
+    color: var(--global-footer-text-color)
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
@@ -282,7 +281,7 @@ blockquote {
 .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color)
+    color: var(--global-footer-text-color)
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link:hover {
@@ -296,7 +295,7 @@ blockquote {
 }
 
 .navbar.navbar-light .navbar-brand.social a i::before {
-    color: var(--global-text-color);
+    color: var(--global-footer-text-color);
     transition-property: all 0.2s ease-in-out
 }
 
@@ -308,7 +307,7 @@ blockquote {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--global-text-color);
+    background-color: var(--global-footer-text-color);
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s
@@ -349,7 +348,7 @@ blockquote {
 }
 
 .social .contact-icons a i::before {
-    color: var(--global-text-color);
+    color: var(--global-footer-text-color);
     transition-property: all 0.2s ease-in-out
 }
 
