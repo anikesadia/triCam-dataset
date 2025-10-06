@@ -48,14 +48,16 @@ html[data-theme='dark'] .fa-sun {
     text-align: center;
 }
 #home-title{
-font-weight:bold;
+font-weight: bolder;
 }
 #title-1{
     color:white;
+    font-weight: bold;
     }
 
 #title-2{
     color: var(--global-hover-color);
+    font-weight: bold;
     }
 #footer_name{
     color: var(--global-hover-color);
@@ -63,6 +65,7 @@ font-weight:bold;
     /* font-style:italic; */
     font-size: 15px;
 }
+.font-weight-bold{color:white;}
 #title-name{
     width:50%;
     /* background-color:red; */
