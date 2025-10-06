@@ -48,8 +48,15 @@ html[data-theme='dark'] .fa-sun {
     text-align: center;
 }
 #home-title{
-color:var(--global-hover-color);
+font-weight:bold;
 }
+#title-1{
+    color:white;
+    }
+
+#title-2{
+    color: var(--global-hover-color);
+    }
 #footer_name{
     color: var(--global-hover-color);
     /* text-decoration: underline; */
