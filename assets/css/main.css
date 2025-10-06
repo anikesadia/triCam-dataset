@@ -74,6 +74,7 @@ html[data-theme='dark'] .fa-moon {
 
 body {
     padding-bottom: 0px;
+    font-family: 'Inter', sans-serif;
     color: var(--global-text-color);
     background-color: var(--global-bg-color)
 }
