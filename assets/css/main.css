@@ -43,6 +43,9 @@ html[data-theme='dark'] .fa-sun {
     padding-top: 12px;
     display: block
 }
+#post-content{
+    text-align: center;
+}
 #footer_name{
     color: var(--global-hover-color);
     /* text-decoration: underline; */
