@@ -277,7 +277,7 @@ blockquote {
 }
 
 .navbar.navbar-light .navbar-brand {
-    color: var(--global-footer-text-color)
+    color: white;
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
