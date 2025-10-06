@@ -4,7 +4,7 @@
     --global-text-color: #000;
     --global-text-color-light: #828282;
     --global-theme-color: #fe4f02;
-    --global-hover-color: #d1634d;
+    --global-hover-color: #fe4f02;
     --global-footer-bg-color: #1C1C1D;
     --global-footer-text-color: #e8e8e8;
     --global-footer-link-color: #fff;
@@ -46,6 +46,9 @@ html[data-theme='dark'] .fa-sun {
 }
 #post-content{
     text-align: center;
+}
+#home-title{
+color:var(--global-hover-color);
 }
 #footer_name{
     color: var(--global-hover-color);
@@ -281,7 +284,7 @@ blockquote {
 .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-footer-text-color)
+    color: var(--global-hover-color)
 }
 
 .navbar.navbar-light .navbar-nav .nav-item.active>.nav-link:hover {
