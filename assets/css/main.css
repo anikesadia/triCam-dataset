@@ -71,6 +71,12 @@ font-weight: bolder;
     /* background-color:red; */
     /* float: left; */
 }
+#section-title {
+  border-bottom: 3px solid grey;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
 html[data-theme='dark'] .fa-moon {
     display: none
 }
