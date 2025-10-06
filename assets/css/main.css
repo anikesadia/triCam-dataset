@@ -50,7 +50,7 @@ html[data-theme='dark'] .fa-sun {
     font-size: 15px;
 }
 #title-name{
-    width:200px;
+    width:500px;
     float: left;
 }
 html[data-theme='dark'] .fa-moon {
